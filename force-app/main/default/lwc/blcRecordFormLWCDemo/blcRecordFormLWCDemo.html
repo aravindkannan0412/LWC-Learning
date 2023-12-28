@@ -1,0 +1,73 @@
+<template>
+    <lightning-card title="create record using lightning-record-form">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+             object-api-name={objectName}
+             fields={fieldList}
+             onsuccess={successHandler}
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="display record using view lightning-record-form">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+             object-api-name={objectName}
+             fields={fieldList}
+             record-id="0011m00000o40EJAAY"
+             mode="view"
+             columns="2"
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="display record using ready only lightning-record-form">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+             object-api-name={objectName}
+             fields={fieldList}
+             record-id="0011m00000o40EJAAY"
+             mode="readonly"
+             columns="2"
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="display record using edit only lightning-record-form">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+             object-api-name={objectName}
+             fields={fieldList}
+             record-id="0011m00000o40EJAAY"
+             mode="edit"
+             columns="2"
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="display record using edit using layout lightning-record-form">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+             object-api-name={objectName}
+             record-id="0011m00000o40EJAAY"
+             mode="edit"
+             columns="2"
+             layout-type="Compact"
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+    <template lwc:if={dynamicRecDisplay}>
+        <lightning-card title="display record using edit using layout with dynamic id lightning-record-form">
+            <div class="slds-var-m-around_medium">
+                <lightning-record-form
+                 object-api-name={objectApiName}
+                 record-id={recordId}
+                 mode="edit"
+                 columns="2"
+                 layout-type="Compact"
+                ></lightning-record-form>
+            </div>
+        </lightning-card>
+    </template>
+   
+</template>

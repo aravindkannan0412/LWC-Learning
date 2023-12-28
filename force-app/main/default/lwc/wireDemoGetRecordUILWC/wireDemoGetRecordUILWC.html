@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="get Record UI Wire Adapted">
+        <div class="slds-var-m-around_medium">
+          <template for:each={formFields} for:item="field">
+            <div key={field.label}>
+                <span><strong>{field.label}:</strong></span>
+                <span><strong>{field.value}</strong></span>
+                <div class="slds-var-m-bottom_small"></div>
+            </div>
+          </template>
+
+        </div>
+    </lightning-card>
+</template>

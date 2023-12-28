@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>blcRecordFormLWCDemo</componentName>
+                <identifier>c_blcRecordFormLWCDemo</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>blcRecordFormViewLWCDemo</componentName>
+                <identifier>c_blcRecordFormViewLWCDemo</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>blcRecordFormEditLWCDEmo</componentName>
+                <identifier>c_blcRecordFormEditLWCDEmo</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>blcRecordEditCustomLWCDemo</componentName>
+                <identifier>c_blcRecordEditCustomLWCDemo</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Base LWC Components</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateThreeColumns</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

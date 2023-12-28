@@ -1,0 +1,24 @@
+<template>
+    <lightning-card  title="Conditional Rendering">
+        <div class="slds-var-m-around_x-small">
+           <lightning-button 
+             variant="Brand"
+             label="Show Data" 
+             title="Show Data"
+             onclick={handleClick} 
+             class="slds-var-m-left_x-small"
+           ></lightning-button>
+            <template if:true={isVisisble}>
+                <div>Welcome to zero to Hero LWC series</div>
+            </template>
+            <template if:false={isNotVisisble}>
+                <div>Welcome to zero to Hero in directives in LWC</div>
+            </template>
+
+            <lightning-input  type="text" label="Type Hello to see the Data" onkeyup={changeHandler}></lightning-input>
+            <template if:true={helloMethod}>
+                <div>Hurra!! you have typed correctly</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

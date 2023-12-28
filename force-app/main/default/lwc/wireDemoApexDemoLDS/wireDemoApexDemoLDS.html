@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Apex wire To property Demo">
+        <div class="slds-var-m-around_medium">
+            <template lwc:if={Accounts.data}>
+                    <template for:each={Accounts.data} for:item="acc">
+                        <div key={acc.id}>
+                            <div class="slds-box slds-box_xx-small">
+                                <p><strong>Name: </strong>{acc.Name}</p>
+                                <p><strong>Type: </strong>{acc.Type}</p>
+                                <p><strong>Industry: </strong>{acc.Industry}</p>
+                            </div>
+                        </div>
+                    </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Apex wire To Function Demo with Data transform">
+        <div class="slds-var-m-around_medium">
+            <template lwc:if={accountList}>
+                    <template for:each={accountList} for:item="acc">
+                        <div key={acc.id}>
+                            <div class="slds-box slds-box_xx-small">
+                                <p><strong>Name: </strong>{acc.Name}</p>
+                                <p><strong>Type: </strong>{acc.newType}</p>
+                                <p><strong>Industry: </strong>{acc.Industry}</p>
+                            </div>
+                        </div>
+                    </template>
+            </template>
+        </div>
+    </lightning-card>
+        
+</template>

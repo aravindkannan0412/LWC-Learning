@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>carhubFilter</componentName>
+                <identifier>c_carhubFilter</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>left</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>carhubTitleList</componentName>
+                <identifier>c_carhubTitleList</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>center</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>carhubCard</componentName>
+                <identifier>c_carhubCard</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>right</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Car Explorer</masterLabel>
+    <template>
+        <name>carhubPageTemplate_2_7_3</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

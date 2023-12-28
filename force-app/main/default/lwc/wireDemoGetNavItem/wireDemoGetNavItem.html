@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="get nav item view ui Wire Adapted">
+        <div class="slds-var-m-around_medium">
+            <template lwc:if={result}>
+                <div>developerName-{result.developerName}</div>
+                <div>OjectApiName-{result.objectApiName}</div>
+                <div>PageReference-{result.pageReference.type}</div>
+            </template>    </div>
+    </lightning-card>
+</template>

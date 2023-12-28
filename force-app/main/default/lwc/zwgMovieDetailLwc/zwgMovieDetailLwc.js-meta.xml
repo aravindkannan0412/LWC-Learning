@@ -1,0 +1,11 @@
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>59.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Movie detail </masterLabel>
+	<description>hold the movie details when its click</description>
+	<targets>
+		<target>lightning__AppPage</target>
+		<target>lightningCommunity__Page</target>
+	</targets>
+
+</LightningComponentBundle>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>descriptionOne</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>descriptionOne</shortDescription>
+        <value>this is the label which is used for the salesforce resource context part</value>
+    </labels>
+    <labels>
+        <fullName>descriptionTwo</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>descriptionTwo</shortDescription>
+        <value>this is the long text used in testing of custom lalbel importization in the salesforce lightning web component programming model</value>
+    </labels>
+</CustomLabels>

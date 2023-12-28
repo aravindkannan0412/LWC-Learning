@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Child component">
+        <div class="slds-var-m-around_medium">
+            <h1>Hey I am heading 1</h1>
+            <template for:each={userNames} for:item="user">
+                <div class="name" key={user}>
+                    {user}
+                </div>
+            </template>
+            <div class="child" lwc:dom="manual">
+                
+            </div>
+            <lightning-button 
+              variant="base"
+              label="Fetch Details" 
+              onclick={handleClick} 
+            ></lightning-button>
+        </div>
+    </lightning-card>
+   
+</template>

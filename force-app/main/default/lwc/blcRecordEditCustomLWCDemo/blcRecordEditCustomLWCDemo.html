@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="custom validation in lightning record edit form">
+        <div class="slds-var-p-around_medium">
+            <lightning-record-edit-form object-api-name={objectName} onsubmit={handleSubmit}  onsuccess={successHandler} onerror={handleError}>
+               <lightning-input label="name" value={inputValue} onkeyup={handleChange} class="slds-var-m-bottom_x-small"></lightning-input>
+
+               <lightning-button class="slds-var-m-top_small" type="submit" label="Create Account"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Apex wire To  Demo with params">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox name="type" label ="Chooseyour type" value={salectedType} options={typeOptions} onchange={typeHandler}></lightning-combobox>
+            <template lwc:if={filteredAccount.data}>
+                    <template for:each={filteredAccount.data} for:item="acc">
+                        <div key={acc.id}>
+                            <div class="slds-box slds-box_xx-small">
+                                <p><strong>Name: </strong>{acc.Name}</p>
+                                <p><strong>Type: </strong>{acc.Type}</p>
+                                <p><strong>Industry: </strong>{acc.Industry}</p>
+                            </div>
+                        </div>
+                    </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    
+        
+</template>

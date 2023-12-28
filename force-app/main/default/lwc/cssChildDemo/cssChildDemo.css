@@ -1,0 +1,11 @@
+:host{
+    display: block;
+    background-color: red;
+    color:#fff;
+} /* child css can apply styles to host element*/
+
+:host(.blue){
+    display: block;
+    background-color: blue;
+    color:#fff;
+}

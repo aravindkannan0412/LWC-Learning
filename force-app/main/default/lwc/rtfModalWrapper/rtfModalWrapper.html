@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Modal Component Demo" >
+        <div class="slds-var-p-around_medium">
+            <lightning-button variant="brand" label="open" onclick={openHandler}></lightning-button>
+        </div>
+    </lightning-card>
+    <template lwc:if={isOpen}>
+        <c-rtf-reusable-modal-comp onclosemodal={closeHandler}>
+            <div slot="title"><h1>Modal Header</h1></div>
+            <div><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas repudiandae magnam numquam dignissimos deleniti. Cumque magni exercitationem molestias autem optio cupiditate iure. Tenetur veritatis amet cumque molestias pariatur quasi ad.</p></div>
+            <div slot="footer">
+                <button class="slds-button slds-button_neutral" onclick={closeHandler}>Cancel</button>
+                <button class="slds-button slds-button_brand">Save</button>
+            </div>
+        </c-rtf-reusable-modal-comp>
+    </template>
+</template>

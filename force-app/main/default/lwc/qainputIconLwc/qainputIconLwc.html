@@ -1,0 +1,21 @@
+<template>
+    <template lwc:if={show}>
+        <h1>qainputIconLwc</h1>
+    </template>
+
+    <lightning-card title="lightning input with icons">
+        <div class="slds-var-p-around_medium">
+        <div class="slds-is-relative">
+            <lightning-icon icon-name="utility:email" alternative-text="Email" title="Email" size="x-small" class="left-icon"></lightning-icon>
+
+            <lightning-input type="text" label="Email" class="icon-left"></lightning-input>
+        </div>
+
+        <div class="slds-is-relative">
+            <lightning-icon icon-name={passwordIcon} alternative-text="Email" title="Email" size="x-small" class="right-icon" onclick={passwordHandler}></lightning-icon>
+
+            <lightning-input type={passwordType} label="Password" class="icon-right"></lightning-input>
+        </div>
+        </div>
+    </lightning-card>
+</template>

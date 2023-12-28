@@ -1,0 +1,18 @@
+h1{
+    font-size: 30px;
+    color:red;
+}
+/*  parent css cant reach into child component */
+
+/* c-css-child-demo{
+    display: block;
+    background-color: green;
+    color: #fff;
+} parent component css can style a host element */
+
+p{
+    font-size: 20px;
+    color: yellow;
+}
+
+/* slots passed from parent only be styled */

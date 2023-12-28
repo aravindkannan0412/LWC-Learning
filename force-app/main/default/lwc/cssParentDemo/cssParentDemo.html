@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="css composition">
+        <div class="slds-var-p-around_medium">
+            <h1> Hello I am a parent Component</h1>
+            <c-css-child-demo> <!-- host element -->
+                <p>Hello I am Slot one</p>
+
+            </c-css-child-demo>
+
+            <c-css-child-demo class="blue"> <!-- host element -->
+                <p>Hello I am Slot two</p>
+            </c-css-child-demo>
+        </div>
+    </lightning-card>
+</template>

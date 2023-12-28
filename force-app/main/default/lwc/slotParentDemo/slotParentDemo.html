@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="slot Demos">
+        <div class="slds-var-p-around_medium">
+            <c-slot-child-demo>
+                <p class="slds-text-color_success">My name is salesforceTroop from parent</p>
+                <p class="slds-text-color_error" slot="second">My Age is 25 from parent</p>
+                <p slot="footer">I am footer</p>
+            </c-slot-child-demo>
+        </div>
+
+        <div class="slds-var-p-around_medium">
+            <c-slot-child-demo>
+                <p class="slds-text-color_success">My name is salesforceTroop from parent</p>
+                <p class="slds-text-color_error" slot="second">My Age is 25 from parent</p>
+                <!-- <p slot="footer">I am footer</p> -->
+            </c-slot-child-demo>
+        </div>
+    </lightning-card>
+
+
+</template>

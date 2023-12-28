@@ -1,0 +1,32 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card  title="One Way Data Binding">
+      <div>This is {fullname}</div>
+    </lightning-card>
+
+    <lightning-card  title="Two Way Data Binding">
+        <div class="slds-m-around_x-small">
+            <lightning-input  type="text" label="Enter some text" onkeyup={changeHandler}></lightning-input>
+            <div>{fullname} on a course called {title}</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="@trackVsnormal">
+        <div class="slds-m-around_x-small">
+            <lightning-input  type="text" label="Enter city name" onkeyup={trackHandler2}> </lightning-input>
+            <div>I am residing in normal city {address2.city}</div>
+
+            <lightning-input  type="text" label="Enter track city name" onkeyup={trackHandler1}> </lightning-input>
+            <div>I am residing in track city {address1.city}</div>
+
+            <lightning-input  type="text" label="Enter new object city name" onkeyup={trackHandler3}> </lightning-input>
+            <div>I am residing in track with new object  city {address3.city}</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="getter-demo">
+        <div class="slds-m-around_x-small">
+           Employee name is {fetchUserName} and his salary is {totalSalary}
+        </div>
+    </lightning-card>
+</template>

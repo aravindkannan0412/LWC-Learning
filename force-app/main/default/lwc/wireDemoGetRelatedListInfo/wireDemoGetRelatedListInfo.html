@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="get related List Info Demo">
+        <div class="slds-var-p-around_medium">
+            <template if:true={relatedData}>
+                <template for:each={relatedData} for:item="list">
+                    <p key={list.lable}>{list.label} - {list.fieldApiName}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    <div class="slds-var-p-bottom_medium"></div>
+
+    <lightning-card title="get related List count Demo">
+        <div class="slds-var-p-around_medium">
+            <template if:true={relatedListCount}>
+                    <p>{relatedListCount.listReference.relatedListId} - {relatedListCount.count}</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <div class="slds-var-p-bottom_medium"></div>
+
+    <lightning-card title="get related List records Demo">
+        <div class="slds-var-p-around_medium">
+            <template if:true={relatedListRecords}>
+                  <template for:each={relatedListRecords} for:item="rec">
+                    <div key={rec.Id}>
+                        <p>{rec.Name}-{rec.Phone}-{rec.Title}</p>
+                    </div>
+                  </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    <div class="slds-var-p-bottom_medium"></div>
+
+    <lightning-card title="get related List particular Demo">
+        <div class="slds-var-p-around_medium">
+            <template if:true={relatedSingleList}>
+                  <template for:each={relatedSingleList} for:item="reclst">
+                    <div key={reclst.label}>
+                        <p>{reclst.label}-{reclst.dataType}</p>
+                    </div>
+                  </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

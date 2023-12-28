@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="get Object infos multiple object ">
+        <div class="slds-var-m-around_medium">
+          
+           
+            <template lwc:if={objectInfos}>
+                <template for:each={objectInfos.results} for:item="object">
+                    <div key={object.result.apiName}>
+                        <div> Object API Name-{object.result.apiName}</div>
+                        <div> defualt recortype Name-{object.result.defaultRecordTypeId}</div>
+                    </div>
+
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

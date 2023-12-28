@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-var-m-bottom_large">
+        <c-p2c-alert-component message="Hurray i got the data!!!" card-heading="parent - child primitive data communication" number=20 is-valid=false></c-p2c-alert-component>
+        <!-- the attirubtes used in child component should be api decorated props in child and if the property use camel it needs to be reffered with kebab case  -->
+        <!-- passing primitives to child -->
+    </div>
+    <div class="slds-var-m-bottom_large">
+        <c-p2c-carousal-component carousal-details={carouselData}></c-p2c-carousal-component>
+        <!-- the attirubtes used in child component should be api decorated props in child and if the property use camel it needs to be reffered with kebab case  -->
+         <!-- passing non-primitives to child -->
+    </div>
+
+    <div class="slds-var-m-bottom_large">
+        <lightning-card title="Parent to child communication on action">
+            <div class="slds-var-m-around_medium">
+               <lightning-input type="number" label="Enter percentage" onkeyup={changeHandler}></lightning-input>
+            </div>
+            <div class="slds-var-m-around_medium">
+                <c-p2c-progress-bar progress-percent={percentage}></c-p2c-progress-bar>
+            </div> 
+          </lightning-card>
+        <!-- the attirubtes used in child component should be api decorated props in child and if the property use camel it needs to be reffered with kebab case  -->
+        <!-- passing data to child when an event occurs-->
+    </div>
+
+    <div class="slds-var-m-bottom_large">
+        <lightning-button variant="brand" label="Reset Slider" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+
+        <c-p2c-slider-component card-title="Calling child method from parent"></c-p2c-slider-component>
+        <!-- the attirubtes used in child component should be api decorated props in child and if the property use camel it needs to be reffered with kebab case  -->
+        <!-- calling child method from parent-->
+    </div>
+</template>

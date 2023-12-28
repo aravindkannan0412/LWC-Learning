@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="get Object info ">
+        <div class="slds-var-m-around_medium">
+          
+            {defaultRecordType}<br>
+            <template lwc:if={objectInforProps.data}>
+                
+                {objectInforProps.data.apiName}
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Refresh View API">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-edit-form
+            object-api-name={objectName}
+            onsuccess={successHandler}
+            >
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name={fieldList.nameField} label="Name"></lightning-input-field>
+            <lightning-input-field field-name={fieldList.emailField} label="Email"></lightning-input-field>
+            <lightning-input-field field-name={fieldList.phoneField} label="Phone"></lightning-input-field>
+            <lightning-input-field field-name={fieldList.accountField} label="Account"></lightning-input-field>
+
+            <div class="slds-var-m-top_medium">
+                <lightning-button variant="brand" type="submit" label="Create"></lightning-button>
+            </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
