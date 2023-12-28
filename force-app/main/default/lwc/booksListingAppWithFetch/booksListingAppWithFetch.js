@@ -1,8 +1,8 @@
 import { LightningElement } from 'lwc';
 const BOOK_URL='https://www.googleapis.com/books/v1/volumes?q='
 export default class BooksListingAppWithFetch extends LightningElement {
-    query='Man'
-    books=[]
+    query='Man';
+    books=[];
     debounceTimer
     
     connectedCallback(){
