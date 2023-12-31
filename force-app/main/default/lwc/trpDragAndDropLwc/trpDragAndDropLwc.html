@@ -1,0 +1,21 @@
+<template>
+    <div class="card-wrapper">
+        <template iterator:item={StageNames}>
+            <div class="stage-container" key={item.value} style="max-width:80%;">
+                <template lwc:if={item.first}>
+                    <h1 class="column-heading first-heading">{item.value}</h1>
+                </template>
+                <template lwc:elseif={item.last}>
+                    <h1 class="column-heading last-heading stage-pipe">{item.value}</h1>
+                </template>
+                <template lwc:else>
+                    <h1 class="column-heading stage-pipe">{item.value}</h1> 
+                </template>
+                <div class="stage-column">
+                    <c-trp-drag-and-drop-lwc-child  records={kanbanData} stage={item.value} onlistitemdrag={handleListItemDrag} onitemdrop={handleItemDrop}></c-trp-drag-and-drop-lwc-child>
+                </div>
+
+            </div>
+        </template> 
+    </div>
+</template>

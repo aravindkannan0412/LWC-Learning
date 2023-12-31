@@ -1,0 +1,26 @@
+.slds-item{
+    border:1px solid #d8dde6;
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    margin: 0.25rem;
+    padding: 0.50rem;
+    position: relative;
+
+}
+
+.container1{
+    width:80%;
+    padding: 0.05rem;
+}
+
+.container2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    margin: 3px;
+}
+
+.menu-items{
+    color: #0381ef;
+}

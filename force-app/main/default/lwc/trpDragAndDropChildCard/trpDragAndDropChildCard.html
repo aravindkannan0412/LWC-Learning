@@ -1,0 +1,85 @@
+<template>
+    <template lwc:if={isSameStage}>
+    <li class="slds-item slds-var-m-around_small" draggable="true" ondragstart={itemDragStart}>
+        <div class="container1">
+            <article class="slds-tile slds-tile_board">
+                <h3 class="slds-truncate" title={record.Name}>
+                    <a href="#" data-id={record.id} onclick={navigationOppHandler}>
+                        <span class="slds-truncate" data-id={record.id}>
+                            {record.Name}
+                        </span>
+                    </a>
+                </h3>
+    
+                <div class="slds-tile__detail slds-text-body_small">
+                    <p class="slds-text-heading_small">
+                        Amount: ${record.Amount}
+                    </p>
+                    <p class="slds-truncate" title={record.AccountName}>
+                        <a href="#" data-id={record.AccountId} onclick={navigationAccHandler}>
+                            <span class="slds-truncate" data-id={record.AccountId}>
+                                {record.AccountName}
+                            </span>
+                        </a>
+                    </p>
+                    <p class="slds-truncate" title={record.CloseDate}>Closing {record.CloseDate}</p>
+                </div>
+            </article>
+        </div>
+        <div class="container2">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click" lwc:ref="open">
+                <button class="slds-button slds-button_icon-xx-small slds-button_icon-border menu-button" title="Show More"  onclick={openMenuItems}>
+                    <lightning-icon icon-name='utility:down' alternative-text='down' size='xx-small' title='down'></lightning-icon>
+                </button>
+                <div class="slds-dropdown slds-dropdown_right">
+                    <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                        <li class="slds-dropdown__item" role="presentation" onclick={viewRecord}>
+                            <a href="#" role="menuitem" tabindex="0">
+                            <span class="slds-truncate menu-items" title="View">View</span>
+                            </a>
+                        </li>
+                        <li class="slds-dropdown__item" role="presentation" onclick={editRecord}>
+                            <a href="#" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate menu-items" title="Edit">Edit</span>
+                            </a>
+                        </li>
+                        <li class="slds-dropdown__item" role="presentation" onclick={deleteRecord}>
+                            <a href="#" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate menu-items" title="Delete">Delete</span>
+                            </a>
+                        </li>
+                   
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </li>
+    </template>
+
+    <template lwc:if={showModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeModal}>
+                <lightning-icon icon-name="utility:close" alternative-text="Close-Modal" variant="inverse" size="small" title="close"></lightning-icon>
+            </button>
+            <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{mode} {record.Name}</h1>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-var-m-around_medium">
+                    <lightning-record-form
+                     object-api-name={objectApiName}
+                     record-id={record.id}
+                     mode={mode}
+                     columns="2"
+                     layout-type="Full"
+                     onsuccess={handleSuccess}
+                    ></lightning-record-form>
+                </div>
+            </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+    
+</template>

@@ -1,0 +1,14 @@
+<template>
+    <ul class="slds-has-dividers_around-space dropZone" style="height:70vh;overflow-y:auto;" ondrop={handleDrop} ondragover={handleDragOver}>
+        <div class="totalCurrency">
+            <lightning-formatted-number format-style="currency"
+                currency-code="USD"
+                value={totalOpportunityAmount}
+                maximum-fraction-digits="0"
+            ></lightning-formatted-number>
+        </div>        
+        <template for:each={records} for:item="recordItem">
+            <c-trp-drag-and-drop-child-card key={recordItem.id} stage={stage} record={recordItem} onitemdrag={dragItemHandler}></c-trp-drag-and-drop-child-card>
+        </template>
+    </ul>
+</template>
